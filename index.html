@@ -1,0 +1,2418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EBEFF1">
+
+<title>ECC Group | Construction, Engineering & Built Environment</title>
+<meta name="description" content="Discover ECC Group's nine specialist businesses across construction, engineering, manufacturing, fit-out, property development and modular solutions in the UAE.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://eccgroup.ae/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ECC Group | The Built Environment, Connected">
+<meta property="og:description" content="Nine specialist businesses. Connected expertise across construction, engineering, manufacturing and the built environment.">
+<meta property="og:url" content="https://eccgroup.ae/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --color-primary: #EBEFF1;
+  --color-primary-dark: #D6DDE0;
+  --color-primary-light: #F5F7F8;
+
+  --color-secondary: #4D4C4D;
+  --color-secondary-dark: #333233;
+  --color-secondary-light: #777677;
+
+  --color-heading: #292B2D;
+  --color-text: #4D4C4D;
+  --color-muted: #62676B;
+
+  --color-background: #FFFFFF;
+  --color-background-alt: #EBEFF1;
+  --color-surface: #F7F8F8;
+  --color-surface-alt: #E5E9EB;
+
+  --color-border: #D5DADD;
+  --color-border-strong: #AEB6BA;
+
+  --color-interactive: #4D4C4D;
+  --color-hover: #333233;
+  --color-focus: #4D4C4D;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --container: 1300px;
+  --section-space: 110px;
+  --shadow: 0 20px 55px rgba(25,30,35,.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding: var(--section-space) 0;
+}
+
+.section-light {
+  background: var(--color-primary-light);
+}
+
+.section-grey {
+  background: var(--color-primary);
+}
+
+.section-dark {
+  background: var(--color-secondary-dark);
+  color: white;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+}
+
+.eyebrow:before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-weight: 600;
+  line-height: 1.08;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(46px, 6.4vw, 82px);
+  letter-spacing: -4px;
+}
+
+h2 {
+  font-size: clamp(36px, 4.2vw, 58px);
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: 28px;
+  letter-spacing: -.7px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.section-heading > div:first-child {
+  max-width: 760px;
+}
+
+.section-heading p {
+  max-width: 420px;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 14px 25px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 16px;
+  transition: .25s ease;
+}
+
+.btn-dark {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.btn-dark:hover {
+  background: var(--color-secondary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background: white;
+  color: var(--color-heading);
+}
+
+.btn-light:hover {
+  background: var(--color-primary);
+}
+
+.btn-outline {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.btn-outline:hover {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.btn-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-secondary);
+  padding-bottom: 5px;
+}
+
+.text-link:hover {
+  color: var(--color-secondary-dark);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.nav-wrap {
+  min-height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-heading);
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  background: var(--color-secondary);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.brand-name small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  color: var(--color-muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-secondary);
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary-dark);
+}
+
+.nav-contact {
+  background: var(--color-secondary);
+  color: white !important;
+  padding: 13px 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 28px;
+  color: var(--color-heading);
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0 0 0 42%;
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-primary) 0%,
+      rgba(235,239,241,.72) 12%,
+      rgba(235,239,241,.05) 55%
+    ),
+    linear-gradient(0deg, rgba(24,29,32,.35), transparent 45%),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+  width: 62%;
+}
+
+.hero h1 {
+  max-width: 800px;
+}
+
+.hero h1 span {
+  color: var(--color-secondary);
+}
+
+.hero-description {
+  max-width: 580px;
+  margin: 28px 0 32px;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-bottom {
+  position: absolute;
+  z-index: 3;
+  bottom: 35px;
+  right: max(20px, calc((100% - var(--container))/2));
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.hero-index {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: 26px;
+}
+
+.hero-index:before {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: var(--color-secondary);
+}
+
+/* Credibility */
+
+.proof-strip {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.proof-item {
+  padding: 34px 28px;
+  border-right: 1px solid var(--color-border);
+}
+
+.proof-item:first-child {
+  padding-left: 0;
+}
+
+.proof-item:last-child {
+  border: 0;
+}
+
+.proof-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.proof-label {
+  font-size: 15px;
+  color: var(--color-muted);
+  margin-top: 7px;
+}
+
+/* Introduction */
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.intro-statement {
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 3.5vw, 47px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  color: var(--color-heading);
+}
+
+.intro-statement span {
+  color: var(--color-secondary);
+}
+
+.intro-copy {
+  max-width: 570px;
+}
+
+.intro-copy p {
+  font-size: 18px;
+}
+
+.intro-note {
+  margin-top: 30px;
+  border-left: 2px solid var(--color-secondary);
+  padding: 6px 0 6px 20px;
+  font-size: 16px;
+  color: var(--color-muted);
+}
+
+/* Business ecosystem */
+
+.ecosystem-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.ecosystem-top p {
+  max-width: 450px;
+  margin: 0;
+}
+
+.ecosystem-line {
+  height: 1px;
+  background: var(--color-border-strong);
+  position: relative;
+  margin: 60px 0 35px;
+}
+
+.ecosystem-line:before,
+.ecosystem-line:after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  top: -5px;
+}
+
+.ecosystem-line:before {
+  left: 0;
+}
+
+.ecosystem-line:after {
+  right: 0;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 32px;
+}
+
+.business-item {
+  padding: 32px 5px 34px;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  transition: .25s;
+}
+
+.business-item:hover {
+  padding-left: 14px;
+}
+
+.business-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 19px;
+}
+
+.business-number {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.business-item h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.business-item p {
+  font-size: 16px;
+  color: var(--color-muted);
+  margin-bottom: 18px;
+}
+
+.business-item a {
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.business-item a:hover {
+  color: var(--color-secondary-dark);
+}
+
+/* Capabilities and six SVG icons */
+
+.capabilities {
+  background: var(--color-secondary-dark);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.capabilities:after {
+  content: "ECC";
+  position: absolute;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 330px;
+  letter-spacing: -30px;
+  color: rgba(255,255,255,.025);
+  right: -20px;
+  bottom: -115px;
+  pointer-events: none;
+}
+
+.capabilities h2 {
+  color: white;
+}
+
+.capabilities .section-heading p {
+  color: #D5DADD;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.capability {
+  padding: 38px 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.capability-icon {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.32);
+  margin-bottom: 25px;
+  color: #FFFFFF;
+}
+
+.capability-icon svg {
+  width: 39px;
+  height: 39px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.capability h3 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.capability p {
+  color: #C6C9CB;
+  font-size: 16px;
+  margin: 0;
+  max-width: 350px;
+}
+
+/* Projects */
+
+.portfolio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-secondary);
+  padding: 11px 17px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-secondary);
+  color: white;
+  border-color: var(--color-secondary);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px 28px;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-image {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-primary);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.045);
+}
+
+.project-type {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 8px 13px;
+  background: white;
+  color: var(--color-heading);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.project-info {
+  padding: 22px 0 0;
+}
+
+.project-info h3 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.project-info p {
+  font-size: 16px;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.project-meta {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: .4px;
+}
+
+.project-note {
+  margin-top: 38px;
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+/* Experience */
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.evidence-visual {
+  min-height: 450px;
+  padding: 45px;
+  background:
+    linear-gradient(0deg, rgba(35,37,38,.75), rgba(35,37,38,.12)),
+    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.evidence-visual h3 {
+  font-size: 37px;
+  color: white;
+  max-width: 380px;
+}
+
+.evidence-visual p {
+  margin: 15px 0 0;
+  color: #E9E9E9;
+}
+
+.evidence-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+
+.evidence-item {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.evidence-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 19px;
+  color: var(--color-heading);
+  margin-bottom: 9px;
+}
+
+.evidence-item p {
+  font-size: 16px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Process */
+
+.process {
+  background: var(--color-primary);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  counter-reset: process;
+}
+
+.process-step {
+  padding-top: 25px;
+  border-top: 1px solid var(--color-border-strong);
+  counter-increment: process;
+}
+
+.process-step:before {
+  content: "0" counter(process);
+  display: block;
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 27px;
+}
+
+.process-step h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 16px;
+  color: var(--color-muted);
+}
+
+/* CTA */
+
+.final-cta {
+  background: var(--color-secondary);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.final-cta h2 {
+  color: white;
+  max-width: 780px;
+}
+
+.final-cta p {
+  color: #E0E1E2;
+  max-width: 650px;
+  margin: 23px 0 0;
+}
+
+.cta-decoration {
+  position: absolute;
+  right: -90px;
+  top: -190px;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-decoration:before,
+.cta-decoration:after {
+  content: "";
+  position: absolute;
+  inset: 35px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+}
+
+.cta-decoration:after {
+  inset: 80px;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #292B2D;
+  color: white;
+  padding: 70px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr .7fr 1fr;
+  gap: 55px;
+  padding-bottom: 55px;
+}
+
+.footer-brand .brand {
+  color: white;
+  margin-bottom: 22px;
+}
+
+.footer-brand .brand-mark {
+  background: white;
+  color: var(--color-secondary);
+}
+
+.footer-brand .brand-name small {
+  color: #C4C7C9;
+}
+
+.footer-brand p {
+  font-size: 16px;
+  color: #C4C7C9;
+  max-width: 330px;
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  display: block;
+  color: #C4C7C9;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 14px;
+  color: #BFC2C4;
+}
+
+.footer-bottom a {
+  text-decoration: underline;
+}
+
+/* Exactly two mobile CTA buttons */
+
+.mobile-cta {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255,255,255,.97);
+  border-top: 1px solid var(--color-border);
+  gap: 10px;
+  box-shadow: 0 -8px 25px rgba(0,0,0,.09);
+}
+
+.mobile-cta a {
+  flex: 1;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mobile-call {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.mobile-email {
+  background: var(--color-secondary-dark);
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Animation */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Tablet */
+
+@media(max-width:1050px) {
+  :root {
+    --section-space: 85px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .intro-grid {
+    gap: 50px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+/* Mobile navigation and layout */
+
+@media(max-width:800px) {
+  :root {
+    --section-space: 75px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-wrap {
+    min-height: 74px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 22px 22px 30px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 16px;
+  }
+
+  .nav-links .nav-contact {
+    padding: 14px 18px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: 720px;
+    align-items: flex-start;
+  }
+
+  .hero-photo {
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(235,239,241,.97),
+        rgba(235,239,241,.83) 45%,
+        rgba(235,239,241,.42)
+      ),
+      url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80")
+      center/cover;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 105px 0 130px;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+
+  .proof-item {
+    padding: 25px 16px;
+  }
+
+  .proof-number {
+    font-size: 30px;
+  }
+
+  .intro-grid,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .ecosystem-top,
+  .section-heading,
+  .portfolio-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .business-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 22px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 22px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .final-cta .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mobile-cta {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 85px;
+  }
+}
+
+/* Small mobile */
+
+@media(max-width:540px) {
+  :root {
+    --section-space: 65px;
+  }
+
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  h1 {
+    font-size: 46px;
+    letter-spacing: -2.4px;
+  }
+
+  h2 {
+    font-size: 36px;
+    letter-spacing: -1.4px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .lead,
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-content {
+    padding: 85px 0 115px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0;
+  }
+
+  .proof-item:last-child {
+    border-bottom: 0;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-item {
+    padding: 27px 0;
+  }
+
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability {
+    padding: 28px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .project-image {
+    height: 260px;
+  }
+
+  .evidence-visual {
+    min-height: 350px;
+    padding: 28px;
+  }
+
+  .evidence-list {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .mobile-cta a {
+    font-size: 15px;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ECC Group",
+  "url": "https://eccgroup.ae/",
+  "email": "info@eccgroup.com",
+  "telephone": "+971437367777",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Al Quoz Industrial Area 3, Behind Gold & Diamond Park",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE",
+    "postOfficeBoxNumber": "62393"
+  },
+  "description": "A UAE-based group of nine specialist businesses across construction, engineering, manufacturing, fit-out, real estate development, facilities management and modular construction."
+}
+</script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="#home" aria-label="ECC Group homepage">
+      <span class="brand-mark">ECC</span>
+      <span class="brand-name">
+        ECC GROUP
+        <small>THE BUILT ENVIRONMENT</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="main-navigation">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#businesses">Our Businesses</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-contact">Discuss a Project ↗</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div
+    class="hero-photo"
+    role="img"
+    aria-label="Illustrative modern urban architecture">
+  </div>
+
+  <div class="container">
+
+    <div class="hero-content reveal">
+
+      <div class="hero-index">
+        UAE · ESTABLISHED 1975
+      </div>
+
+      <h1>
+        Building Beyond <span>Boundaries.</span>
+      </h1>
+
+      <p class="hero-description">
+        Nine specialist businesses. Connected expertise across construction,
+        engineering, manufacturing, development and the built environment.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#businesses" class="btn btn-dark">
+          Explore Our Businesses <span class="btn-arrow">↗</span>
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Discuss a Project <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hero-bottom">
+    Engineering · Construction · Development
+  </div>
+
+</section>
+
+<!-- GROUP STATISTICS -->
+
+<section class="proof-strip" aria-label="ECC Group overview">
+
+  <div class="container proof-grid">
+
+    <div class="proof-item">
+      <span class="proof-number">50+ Years</span>
+      <div class="proof-label">Group heritage in the UAE</div>
+    </div>
+
+    <div class="proof-item">
+      <span class="proof-number">9 Businesses</span>
+      <div class="proof-label">Specialist operating companies</div>
+    </div>
+
+    <div class="proof-item">
+      <span class="proof-number">AED 34B+</span>
+      <div class="proof-label">
+        Portfolio project value, as stated by ECC Group
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <div class="container intro-grid">
+
+    <div class="reveal">
+
+      <div class="eyebrow">01 / The Group</div>
+
+      <p class="intro-statement">
+        One connected ecosystem.
+        <span>Multiple dimensions of expertise.</span>
+      </p>
+
+    </div>
+
+    <div class="intro-copy reveal">
+
+      <p>
+        ECC Group brings together nine specialist businesses operating
+        across the construction and built-environment value chain.
+      </p>
+
+      <p>
+        From contracting and electromechanical engineering to fit-out,
+        manufacturing, property development, facilities management and
+        prefabricated solutions, each business contributes its own
+        specialist expertise.
+      </p>
+
+      <p>
+        Established through Engineering Contracting Company in 1975,
+        the Group has developed a diverse portfolio across the UAE.
+      </p>
+
+      <div class="intro-note">
+        A collective of specialist businesses, each operating within
+        its defined area of expertise.
+      </div>
+
+      <a href="https://eccgroup.ae/about-us/" class="text-link">
+        Discover ECC Group <span>↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NINE BUSINESSES -->
+
+<section class="section section-light" id="businesses">
+
+  <div class="container">
+
+    <div class="ecosystem-top reveal">
+
+      <div>
+        <div class="eyebrow">02 / Our Business Ecosystem</div>
+        <h2>
+          Nine businesses.<br>
+          Distinct specialist capabilities.
+        </h2>
+      </div>
+
+      <p>
+        Explore the specialist companies that make up ECC Group.
+        Each has its own expertise, services and operating identity.
+      </p>
+
+    </div>
+
+    <div class="ecosystem-line" aria-hidden="true"></div>
+
+    <div class="business-grid">
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">01 / 09</span>
+        </div>
+        <h3>Engineering Contracting Company</h3>
+        <p>
+          Construction, Design & Build, Value Engineering and
+          integrated project delivery.
+        </p>
+        <a href="https://ecccontracting.ae/">
+          Explore ECC Contracting ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">02 / 09</span>
+        </div>
+        <h3>Abanos</h3>
+        <p>
+          Interior fit-out, specialist joinery, bespoke manufacturing
+          and large-scale interior solutions.
+        </p>
+        <a href="https://abanos.ae/">
+          Explore Abanos ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">03 / 09</span>
+        </div>
+        <h3>United Masters Electromechanical</h3>
+        <p>
+          Mechanical, electrical, plumbing and prefabricated
+          MEP solutions.
+        </p>
+        <a href="https://unitedmasters.net/">
+          Explore UME ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">04 / 09</span>
+        </div>
+        <h3>Prime Metal Industries</h3>
+        <p>
+          Steel and aluminium fabrication, glazing, cladding
+          and architectural metalwork.
+        </p>
+        <a href="https://www.primemetal.ae/">
+          Explore PMI ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">05 / 09</span>
+        </div>
+        <h3>Aurora Real Estate Development</h3>
+        <p>
+          Residential and commercial real estate development
+          in the UAE.
+        </p>
+        <a href="https://aurorauae.com/">
+          Explore Aurora ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">06 / 09</span>
+        </div>
+        <h3>ECC Bespoke</h3>
+        <p>
+          Premium residential construction, commercial fit-out
+          and bespoke project solutions.
+        </p>
+        <a href="https://eccbespoke.com/">
+          Explore ECC Bespoke ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">07 / 09</span>
+        </div>
+        <h3>CoreServ</h3>
+        <p>
+          Facilities management, HVAC, electrical, plumbing,
+          cleaning and maintenance.
+        </p>
+        <a href="https://www.coreserv.ae/">
+          Explore CoreServ ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">08 / 09</span>
+        </div>
+        <h3>DesertBoard</h3>
+        <p>
+          Engineered Palm Strand Board made using upcycled
+          date palm biomass.
+        </p>
+        <a href="https://desertboard.ae/">
+          Explore DesertBoard ↗
+        </a>
+      </article>
+
+      <article class="business-item reveal">
+        <div class="business-top">
+          <span class="business-number">09 / 09</span>
+        </div>
+        <h3>Volta Pods</h3>
+        <p>
+          Fully engineered prefabricated pods with integrated
+          MEP, fixtures and finishes.
+        </p>
+        <a href="https://voltapods.com/">
+          Explore Volta Pods ↗
+        </a>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SIX CAPABILITIES / SIX SVG ICONS -->
+
+<section class="section capabilities" id="capabilities">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div>
+        <div class="eyebrow">03 / Specialist Expertise</div>
+        <h2>
+          Expertise across the<br>
+          built environment.
+        </h2>
+      </div>
+
+      <p>
+        Six connected capability areas demonstrate the breadth
+        of specialist disciplines represented across the Group.
+      </p>
+
+    </div>
+
+    <div class="icon-grid">
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Construction building icon">
+            <path d="M8 41V17L24 7l16 10v24"/>
+            <path d="M15 41V23h18v18"/>
+            <path d="M20 23v18M28 23v18M8 17h32"/>
+            <path d="M18 14h12M24 7v7"/>
+          </svg>
+        </div>
+
+        <h3>Construction & Engineering</h3>
+        <p>
+          Contracting, Design & Build, engineering coordination
+          and value engineering.
+        </p>
+
+      </article>
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Interior architecture icon">
+            <path d="M7 40V9h34v31"/>
+            <path d="M7 21h34M19 9v31"/>
+            <path d="M19 29h11v11"/>
+            <path d="M25 15h10M30 15v6"/>
+          </svg>
+        </div>
+
+        <h3>Fit-Out & Joinery</h3>
+        <p>
+          Interior environments, bespoke joinery, manufacturing
+          and specialist finishes.
+        </p>
+
+      </article>
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Mechanical engineering icon">
+            <circle cx="24" cy="24" r="8"/>
+            <circle cx="24" cy="24" r="3"/>
+            <path d="M24 5v8M24 35v8M5 24h8M35 24h8"/>
+            <path d="m10.5 10.5 5.7 5.7m15.6 15.6 5.7 5.7m0-27-5.7 5.7m-15.6 15.6-5.7 5.7"/>
+          </svg>
+        </div>
+
+        <h3>MEP Solutions</h3>
+        <p>
+          Mechanical, electrical and plumbing systems,
+          including modular MEP delivery.
+        </p>
+
+      </article>
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Metal fabrication icon">
+            <path d="M7 39 17 9h14l10 30z"/>
+            <path d="M17 9 24 39M31 9 24 39M7 39h34"/>
+            <path d="M14 19h20M11 29h26"/>
+          </svg>
+        </div>
+
+        <h3>Metal & Manufacturing</h3>
+        <p>
+          Steel, aluminium, glazing, cladding and architectural
+          manufacturing solutions.
+        </p>
+
+      </article>
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Facilities management icon">
+            <path d="M8 40V18l16-11 16 11v22"/>
+            <path d="M17 40V27h14v13"/>
+            <path d="M14 20h5m10 0h5"/>
+            <path d="M24 13v7M11 40h26"/>
+          </svg>
+        </div>
+
+        <h3>Facilities Management</h3>
+        <p>
+          Building maintenance, HVAC, technical services
+          and property support.
+        </p>
+
+      </article>
+
+      <article class="capability reveal">
+
+        <div class="capability-icon">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Modular construction icon">
+            <path d="M7 16 24 7l17 9v22H7z"/>
+            <path d="m7 16 17 9 17-9M24 25v13"/>
+            <path d="M14 20v10h6V23M28 23v7h6V20"/>
+            <path d="M17 11h14"/>
+          </svg>
+        </div>
+
+        <h3>Modular & Engineered Materials</h3>
+        <p>
+          Prefabricated pods and engineered building materials
+          developed for modern construction.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT PORTFOLIO -->
+
+<section class="section" id="projects">
+
+  <div class="container">
+
+    <div class="portfolio-head reveal">
+
+      <div>
+        <div class="eyebrow">04 / Project Portfolio</div>
+        <h2>
+          Work across<br>
+          different dimensions.
+        </h2>
+      </div>
+
+      <a href="https://eccgroup.ae/" class="text-link">
+        Explore ECC Group <span>↗</span>
+      </a>
+
+    </div>
+
+    <div class="filter-list" role="group" aria-label="Filter projects by sector">
+
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">
+        All projects
+      </button>
+
+      <button class="filter-btn" data-filter="residential" aria-pressed="false">
+        Residential
+      </button>
+
+      <button class="filter-btn" data-filter="commercial" aria-pressed="false">
+        Commercial
+      </button>
+
+      <button class="filter-btn" data-filter="industrial" aria-pressed="false">
+        Industrial
+      </button>
+
+      <button class="filter-btn" data-filter="education" aria-pressed="false">
+        Education
+      </button>
+
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card reveal" data-category="residential">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative contemporary residential architecture"
+            loading="lazy">
+          <span class="project-type">Residential</span>
+        </div>
+
+        <div class="project-info">
+          <h3>Capria East & West</h3>
+          <p>
+            Residential development within Ghaf Woods, Dubai.
+            Listed on the ECC Group portfolio.
+          </p>
+          <div class="project-meta">ENGINEERING CONTRACTING COMPANY</div>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-category="residential">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative luxury residential interior"
+            loading="lazy">
+          <span class="project-type">Residential</span>
+        </div>
+
+        <div class="project-info">
+          <h3>Al Khawaneej Villa</h3>
+          <p>
+            A bespoke residential development comprising
+            a main villa and a dedicated recreational villa.
+          </p>
+          <div class="project-meta">ECC BESPOKE</div>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-category="commercial">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative contemporary commercial interior"
+            loading="lazy">
+          <span class="project-type">Commercial</span>
+        </div>
+
+        <div class="project-info">
+          <h3>AVA, Palm Jumeirah</h3>
+          <p>
+            Luxury residential development on Palm Jumeirah,
+            featured in the ECC Group portfolio.
+          </p>
+          <div class="project-meta">ABANOS</div>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-category="residential">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative high-rise architectural design"
+            loading="lazy">
+          <span class="project-type">Residential</span>
+        </div>
+
+        <div class="project-info">
+          <h3>W Residences</h3>
+          <p>
+            High-rise residential development in Dubai Harbour
+            by Arada.
+          </p>
+          <div class="project-meta">ENGINEERING CONTRACTING COMPANY</div>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-category="industrial">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative industrial engineering environment"
+            loading="lazy">
+          <span class="project-type">Industrial</span>
+        </div>
+
+        <div class="project-info">
+          <h3>Manufacturing & Metalwork</h3>
+          <p>
+            Discover the specialist fabrication and manufacturing
+            capabilities represented by Prime Metal Industries.
+          </p>
+          <div class="project-meta">PRIME METAL INDUSTRIES</div>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-category="education">
+
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=80"
+            alt="Illustrative educational architecture"
+            loading="lazy">
+          <span class="project-type">Education</span>
+        </div>
+
+        <div class="project-info">
+          <h3>Nad Al Shiba School – Phase 2</h3>
+          <p>
+            Educational facility in Dubai, listed within the
+            Engineering Contracting Company portfolio.
+          </p>
+          <div class="project-meta">ENGINEERING CONTRACTING COMPANY</div>
+        </div>
+
+      </article>
+
+    </div>
+
+    <p class="project-note">
+      Photography is illustrative sector imagery and does not claim
+      to depict the named ECC projects. Project descriptions and
+      company associations are based on ECC Group's published portfolio.
+      <a href="https://eccgroup.ae/" class="text-link">
+        View official portfolio ↗
+      </a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="section section-grey">
+
+  <div class="container evidence-grid">
+
+    <div class="evidence-visual reveal">
+
+      <div class="eyebrow" style="color:#FFFFFF">
+        05 / Experience & Expertise
+      </div>
+
+      <h3>Built on decades of specialist experience.</h3>
+
+      <p>
+        Engineering Contracting Company was established in 1975.
+      </p>
+
+    </div>
+
+    <div class="reveal">
+
+      <div class="eyebrow">Corporate Foundations</div>
+
+      <h2>
+        Experience with a specialist foundation.
+      </h2>
+
+      <p class="lead" style="margin-top:22px">
+        ECC Group's history and specialist operating businesses
+        provide a substantial foundation across the built environment.
+      </p>
+
+      <div class="evidence-list">
+
+        <div class="evidence-item">
+          <strong>Group heritage</strong>
+          <p>More than 50 years of history in the UAE.</p>
+        </div>
+
+        <div class="evidence-item">
+          <strong>Project portfolio</strong>
+          <p>
+            Group portfolio value stated as exceeding AED 34 billion.
+          </p>
+        </div>
+
+        <div class="evidence-item">
+          <strong>Lean & Six Sigma</strong>
+          <p>
+            ISO 18404:2015 certification attributed to
+            Engineering Contracting Company.
+          </p>
+        </div>
+
+        <div class="evidence-item">
+          <strong>BIM recognition</strong>
+          <p>
+            BSI BIM Design and Construction Kitemark attributed
+            to Engineering Contracting Company.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="muted" style="font-size:15px;margin-top:20px">
+        Credentials and portfolio figures are presented with their
+        published company or group attribution. They are not implied
+        to apply equally to every subsidiary.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="section process">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div>
+        <div class="eyebrow">06 / How to Engage</div>
+        <h2>
+          A clearer route<br>
+          to the right expertise.
+        </h2>
+      </div>
+
+      <p>
+        Start with your requirement and connect with the appropriate
+        ECC Group contact to discuss the next steps.
+      </p>
+
+    </div>
+
+    <div class="process-grid">
+
+      <article class="process-step reveal">
+        <h3>Identify your requirement</h3>
+        <p>
+          Explore the Group's specialist businesses and identify
+          the relevant capability.
+        </p>
+      </article>
+
+      <article class="process-step reveal">
+        <h3>Explore the expertise</h3>
+        <p>
+          Review the relevant business and its specialist services.
+        </p>
+      </article>
+
+      <article class="process-step reveal">
+        <h3>Start a conversation</h3>
+        <p>
+          Contact ECC Group with your project requirements or enquiry.
+        </p>
+      </article>
+
+      <article class="process-step reveal">
+        <h3>Discuss the next step</h3>
+        <p>
+          Connect with the relevant team to establish how your
+          enquiry can progress.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="section final-cta" id="contact">
+
+  <div class="cta-decoration" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <div class="reveal">
+
+      <div class="eyebrow" style="color:#FFFFFF">
+        07 / Start a Conversation
+      </div>
+
+      <h2>Have a project in mind?</h2>
+
+      <p>
+        Connect with ECC Group to explore its specialist businesses,
+        capabilities and potential project opportunities.
+      </p>
+
+    </div>
+
+    <div class="reveal">
+
+      <a
+        href="mailto:info@eccgroup.com?subject=Project%20Enquiry%20-%20ECC%20Group"
+        class="btn btn-light">
+        Discuss Your Project <span class="btn-arrow">↗</span>
+      </a>
+
+      <p style="font-size:15px;margin-top:18px">
+        Or call
+        <a href="tel:+971437367777" style="color:white;text-decoration:underline">
+          +971 4 373 6777
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a class="brand" href="#home">
+          <span class="brand-mark">ECC</span>
+          <span class="brand-name">
+            ECC GROUP
+            <small>THE BUILT ENVIRONMENT</small>
+          </span>
+        </a>
+
+        <p>
+          Nine specialist businesses delivering complementary
+          expertise across the construction and built-environment sectors.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Explore</h4>
+
+        <a href="#about">About ECC Group</a>
+        <a href="#businesses">Our Businesses</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Project Portfolio</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Group Information</h4>
+
+        <a href="https://eccgroup.ae/about-us/">About Us</a>
+        <a href="https://eccgroup.ae/our-businesses/">Our Businesses</a>
+        <a href="https://eccgroup.ae/innovation/">Innovation</a>
+        <a href="https://eccgroup.ae/csr/">CSR</a>
+        <a href="https://eccgroup.ae/contact-us/">Official Contact Page</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Get in Touch</h4>
+
+        <a href="tel:+971437367777">+971 4 373 6777</a>
+        <a href="mailto:info@eccgroup.com">info@eccgroup.com</a>
+
+        <p style="font-size:15px;color:#C4C7C9;margin-top:18px">
+          Al Quoz Industrial Area 3,<br>
+          Behind Gold & Diamond Park,<br>
+          Dubai, United Arab Emirates.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year">2026</span> ECC Group. All rights reserved.
+      </span>
+
+      <span>
+        Conceptual homepage redesign ·
+        <a href="https://eccgroup.ae/">Official website</a>
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- EXACTLY TWO MOBILE CTA BUTTONS -->
+
+<div class="mobile-cta" aria-label="Quick contact actions">
+
+  <a href="tel:+971437367777" class="mobile-call">
+    Call ECC
+  </a>
+
+  <a
+    href="mailto:info@eccgroup.com?subject=Project%20Enquiry"
+    class="mobile-email">
+    Email ECC
+  </a>
+
+</div>
+
+<script>
+(function() {
+  "use strict";
+
+  /* Mobile navigation */
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", function() {
+
+    const isOpen = navigation.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation"
+    );
+
+    menuToggle.textContent = isOpen ? "×" : "☰";
+
+  });
+
+  navigation.querySelectorAll("a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+      navigation.classList.remove("open");
+
+      menuToggle.setAttribute("aria-expanded", "false");
+
+      menuToggle.setAttribute("aria-label", "Open navigation");
+
+      menuToggle.textContent = "☰";
+
+    });
+
+  });
+
+  /* Project filtering */
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projects = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      const selected = button.dataset.filter;
+
+      filterButtons.forEach(function(item) {
+
+        const active = item === button;
+
+        item.classList.toggle("active", active);
+
+        item.setAttribute("aria-pressed", String(active));
+
+      });
+
+      projects.forEach(function(project) {
+
+        const show =
+          selected === "all" ||
+          project.dataset.category === selected;
+
+        project.hidden = !show;
+
+      });
+
+    });
+
+  });
+
+  /* Scroll reveal animation */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+
+    const observer = new IntersectionObserver(function(entries) {
+
+      entries.forEach(function(entry) {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("visible");
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.12
+    });
+
+    revealElements.forEach(function(element) {
+      observer.observe(element);
+    });
+
+  } else {
+
+    revealElements.forEach(function(element) {
+      element.classList.add("visible");
+    });
+
+  }
+
+  /* Automatic footer year */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+})();
+</script>
+
+</body>
+</html>
